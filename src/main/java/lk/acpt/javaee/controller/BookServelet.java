@@ -123,6 +123,8 @@ public class BookServelet extends HttpServlet {
             BookService service = new BookServiceImpl();
             int update = service.updateBook(bookDto);
 
+            System.out.println(update);
+
             if (update > 0) {
                 resp.setStatus(HttpServletResponse.SC_CREATED); // 201
                 responseMap.put("status", "success");
